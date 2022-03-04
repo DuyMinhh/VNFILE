@@ -1,0 +1,135 @@
+@media screen and (max-width: 768px) {
+    .menu-top-768px {
+        display: none !important;
+    }
+    .menu-bottom-768px {
+        display: none !important;
+    }
+    .btn-registration {
+        width: 15vw !important;
+        font-size: 2vw !important;
+        height: 6vw !important;
+        line-height: 6vw;
+    }
+    .btn-log-in {
+        width: 15vw !important;
+        height: 6vw !important;
+        font-size: 2vw !important;
+        line-height: 4vw;
+        margin-left: 5px !important;
+    }
+    .btn-top-768px {
+        margin-left: 5px;
+    }
+    .backgroundAbout {
+        background-image: url(../img/background5.png);
+        height: 140px;
+        min-height: 150px !important;
+        background-size: cover;
+    }
+    .menu-invest-768px {
+        display: none !important;
+    }
+    .rect-768px {
+        display: none !important;
+    }
+    .image-768px {
+        display: none !important;
+    }
+    .partner-768px {
+        flex-wrap: wrap;
+        padding: 0 !important;
+    }
+    .news-vnfile-768px {
+        flex-wrap: wrap;
+        padding: 0 !important;
+    }
+    .communications-768px {
+        justify-content: center;
+    }
+    .text-align-mobile {
+        text-align: center !important;
+    }
+    .flex-768px {
+        flex-wrap: wrap;
+    }
+    .license-768px {
+        display: none !important;
+    }
+    .footer-text-768px {
+        margin-top: 20px;
+        text-align: justify;
+    }
+    .img-footer-768px {
+        width: 100%;
+    }
+    .info2 .text-p {
+        font-size: 15px;
+        line-height: 16px;
+        padding-top: 0;
+    }
+    .info2 .text .text-condition {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    .info2 .text {
+        padding: 0 !important;
+    }
+    .text-package {
+        font-size: 21px !important;
+    }
+    .list-loan {
+        overflow-x: scroll;
+        padding: 0 !important;
+    }
+    .text-title-loan {
+        margin-top: 12px;
+        font-size: 9px !important;
+    }
+    .note-loan {
+        padding: 0 !important;
+    }
+    .title-steps {
+        font-size: 13px !important;
+        line-height: 16px;
+    }
+    .note-steps {
+        font-size: 13px !important;
+        line-height: 14px;
+        padding-top: 5px;
+    }
+    .text-receive-steps {
+        font-size: 24px !important;
+        padding: 0 !important;
+    }
+    .text-vnfile1 {
+        font-size: 21px !important;
+    }
+    .text-partners {
+        font-size: 23px !important;
+    }
+    .bank-VP {
+        margin: 0 0 10px 0 !important;
+    }
+    .news-VP {
+        padding: 5px !important;
+    }
+    .text-number {
+        font-size: 15px !important;
+        padding-top: 10px;
+    }
+    .text-info-p {
+        font-size: 9px !important;
+    }
+    .achievement-VP {
+        display: block !important;
+        
+    }
+    .img-center {
+        text-align: center;
+    }
+    .img-achievement {
+        width: 40px;
+        height: 40px;
+    }
+}
