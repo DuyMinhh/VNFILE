@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/mobile.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>VNFile</title>
 </head>
 <body>
@@ -17,74 +18,80 @@
     <a href="#">
         <img src="./assets/images/logo.png" style="width: 200px; height: 48px;" alt="">
     </a>
-    <div class="d-flex menu-top-768px" style="margin-left: 70px;">
-        <a class="menu-top text-uppercase" href="#" style="margin-right: 10px;">Vay vốn</a>
-        <a class="menu-top text-uppercase" href="#" style="margin-left: 10px;">Đầu tư</a>
+    <div class="popup-on" style="display: none">
+        <div class="d-flex menu-top-768px" style="margin-left: 70px;">
+            <a class="menu-top text-uppercase" href="#" style="margin-right: 10px;">Vay vốn</a>
+            <a class="menu-top text-uppercase" href="#" style="margin-left: 10px;">Đầu tư</a>
+        </div>
     </div>
     <div class="d-flex">
         <button class="btn-registration">Đăng kí</button>
         <button class="btn-log-in">Đăng nhập</button>
-        <a class="btn-top-768px" href="#"> 
+        <button class="btn-top-768px btn" onclick="popup()"> 
             <img src="./assets/images/menu.png" style="width: 30px; height: 17px;" alt="">
-        </a>
+        </button>
     </div>
 </div>
-<div class="bg-index backgroundAbout position-relative">
-    <div class="menu-bottom menu-bottom-768px d-flex justify-content-around align-items-center" style="padding: 0 80px;">
-        <a href="">
-            <img src="./assets/images/Home-Icon.png" width="25px" height="25px" alt="">
-        </a>
-        <a class="btn-menu-bottom" href="#">Sàn giao dịch</a>
-        <a class="btn-menu-bottom" href="#">Đại lý</a>
-        <a class="btn-menu-bottom" href="#">Điểm thưởng</a>
-        <a class="btn-menu-bottom" href="#">Tin tức</a>
-        <a class="btn-menu-bottom" href="#">Về VNFILE</a>
-        <a class="btn-menu-bottom" href="#">Trải nghiệm</a>
-        <a class="btn-menu-bottom" href="#">Tuyển Dụng</a>
-        <a class="btn-menu-bottom" href="#">Tải ứng dụng</a>
-    </div>
-    <marquee direction="left" height="26px">
-        <div class="marquee">
-            <span class="marquee-rank">A1</span>
-            <span class="marquee-bold">VMX20051435 :</span>
-            <span class="marquee-red">Khoản vay : </span>
-            <span style="font-size: 13px">/ Thời hạn : </span>
-            <span class="marquee-red-bold">30.000.000 VNĐ</span>
-            <span style="font-size: 13px">/ 30 tháng</span>
-            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
-
-            <span class="marquee-rank">A1</span>
-            <span class="marquee-bold">VMX20051435 :</span>
-            <span class="marquee-red">Khoản vay : </span>
-            <span style="font-size: 13px">/ Thời hạn : </span>
-            <span class="marquee-red-bold">30.000.000 VNĐ</span>
-            <span style="font-size: 13px">/ 30 tháng</span>
-            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
-
-            <span class="marquee-rank">A1</span>
-            <span class="marquee-bold">VMX20051435:</span>
-            <span class="marquee-red">Khoản vay: </span>
-            <span style="font-size: 13px">/ Thời hạn :</span>
-            <span class="marquee-red-bold">30.000.000 VNĐ</span>
-            <span style="font-size: 13px">/ 30 tháng</span>
-            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
-
-            <span class="marquee-rank">A1</span>
-            <span class="marquee-bold">VMX20051435 :</span>
-            <span class="marquee-red">Khoản vay : </span>
-            <span style="font-size: 13px">/ Thời hạn :</span>
-            <span class="marquee-red-bold">30.000.000 VNĐ</span>
-            <span style="font-size: 13px">/ 30 tháng</span>
-            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+<div>
+    <div class="position-relative">
+        <img src="./assets/images/bg-index.png" width="100%" height="60%" alt="">
+        <div class="position-absolute menu-bottom menu-bottom-768px d-flex justify-content-around align-items-center" style="padding: 0 80px;">
+            <a href="">
+                <img src="./assets/images/Home-Icon.png" width="25px" height="25px" alt="">
+            </a>
+            <a class="btn-menu-bottom" href="#">Sàn giao dịch</a>
+            <a class="btn-menu-bottom" href="#">Đại lý</a>
+            <a class="btn-menu-bottom" href="#">Điểm thưởng</a>
+            <a class="btn-menu-bottom" href="#">Tin tức</a>
+            <a class="btn-menu-bottom" href="#">Về VNFILE</a>
+            <a class="btn-menu-bottom" href="#">Trải nghiệm</a>
+            <a class="btn-menu-bottom" href="#">Tuyển Dụng</a>
+            <a class="btn-menu-bottom" href="#">Tải ứng dụng</a>
         </div>
-    </marquee>
-    <div class="menu-invest-768px bg-white position-absolute d-flex justify-content-center align-items-center" style="top: 40%; left: 24%; border-radius: 16px; padding: 20px 30px;">
-        <img src="./assets/images/p2p.png" width="227px" height="153px" alt="">
-        <div>
-        <img src="./assets/images/goivon.png" width="227px" height="153px" style="border-left: 1px solid #333333; border-right: 1px solid #333333;" alt="">
+        <marquee class="position-absolute text-marquee" direction="left" height="26px">
+            <div class="marquee">
+                <span class="marquee-rank">A1</span>
+                <span class="marquee-bold">VMX20051435 :</span>
+                <span class="marquee-red">Khoản vay : </span>
+                <span style="font-size: 13px">/ Thời hạn : </span>
+                <span class="marquee-red-bold">30.000.000 VNĐ</span>
+                <span style="font-size: 13px">/ 30 tháng</span>
+                <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+    
+                <span class="marquee-rank">A1</span>
+                <span class="marquee-bold">VMX20051435 :</span>
+                <span class="marquee-red">Khoản vay : </span>
+                <span style="font-size: 13px">/ Thời hạn : </span>
+                <span class="marquee-red-bold">30.000.000 VNĐ</span>
+                <span style="font-size: 13px">/ 30 tháng</span>
+                <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+    
+                <span class="marquee-rank">A1</span>
+                <span class="marquee-bold">VMX20051435:</span>
+                <span class="marquee-red">Khoản vay: </span>
+                <span style="font-size: 13px">/ Thời hạn :</span>
+                <span class="marquee-red-bold">30.000.000 VNĐ</span>
+                <span style="font-size: 13px">/ 30 tháng</span>
+                <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+    
+                <span class="marquee-rank">A1</span>
+                <span class="marquee-bold">VMX20051435 :</span>
+                <span class="marquee-red">Khoản vay : </span>
+                <span style="font-size: 13px">/ Thời hạn :</span>
+                <span class="marquee-red-bold">30.000.000 VNĐ</span>
+                <span style="font-size: 13px">/ 30 tháng</span>
+                <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+            </div>
+        </marquee>
+        <div class="menu-invest menu-invest-768px bg-white position-absolute d-flex justify-content-center align-items-center" style="top: 35%; left: 24%; border-radius: 16px; padding: 20px 30px;">
+            <img src="./assets/images/p2p.png" width="227px" height="153px" alt="">
+            <div>
+            <img src="./assets/images/goivon.png" width="227px" height="153px" style="border-left: 1px solid #333333; border-right: 1px solid #333333;" alt="">
+            </div>
+            <img src="./assets/images/tietkiem.png" width="227px" height="153px" alt="">
         </div>
-        <img src="./assets/images/tietkiem.png" width="227px" height="153px" alt="">
     </div>
+    
 </div>
 <div class="d-flex justify-content-around align-items-center" style="background-color: #333333; padding: 20px 0;">
     <div class="d-flex align-items-center achievement-VP">

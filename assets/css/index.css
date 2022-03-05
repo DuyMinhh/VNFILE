@@ -51,6 +51,10 @@ body {
     height: 60px;
     background: #F2F2F2;
     opacity: 0.88;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 .btn-menu-bottom {
     padding: 0 20px;
@@ -65,6 +69,16 @@ body {
 .btn-menu-bottom:hover {
     color: #DD1F26;
     background-color: #ffffff;
+}
+.text-marquee {
+    z-index: 1000;
+    top: 8%;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.menu-invest {
+    
 }
 .text-number {
     font-style: normal;

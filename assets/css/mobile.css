@@ -22,7 +22,7 @@
         margin-left: 5px;
     }
     .backgroundAbout {
-        background-image: url(../img/background5.png);
+        background-image: url(/vnfile/assets/images/bg-index.png);
         height: 140px;
         min-height: 150px !important;
         background-size: cover;
