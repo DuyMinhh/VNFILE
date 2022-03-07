@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/personal-investment/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>VNFile</title>
+</head>
+<body>
+<div class="bg-white d-flex justify-content-around align-items-center" style="padding-top: 24px;">
+    <a href="#">
+        <img src="../assets/images/logo.png" style="width: 200px; height: 48px;" alt="">
+    </a>
+    <div class="popup-on">
+        <div class="d-flex" style="margin-left: 30px;">
+            <div style="border-bottom: 3px solid #E9333A; padding-bottom: 10px;">
+            <a class="menu-top text-uppercase" href="#" style="color: #E9333A; margin-right: 10px; margin-left: 40px;">Vay vốn</a>
+            </div>
+            <a class="menu-top text-uppercase" href="#" style="margin-left: 10px;">Đầu tư</a>
+        </div>
+    </div>
+    <div class="d-flex">
+        <button class="btn-registration">Đăng kí</button>
+        <button class="btn-log-in">Đăng nhập</button>
+        <button class="btn-top-768px btn" onclick="popup()"> 
+            <img src="../assets/images/menu.png" style="width: 30px; height: 17px;" alt="">
+        </button>
+    </div>
+</div>
+<div class="position-relative">
+    <img src="../assets/images/bg-menu.png" width="100%" height="100%" alt="">
+    <div class="position-absolute menu-bottom d-flex justify-content-center align-items-center" style="padding: 0 80px;">
+        <a class="btn-menu-bottom" href="#">Gói vay Cá Nhân</a>
+        <a class="btn-menu-bottom" href="#">Gói vay Doanh nghiệp</a>
+        <a class="btn-menu-bottom" href="#">Gói vay Hộ Kinh Doanh</a>
+        <a class="btn-menu-bottom" href="#">Khuyến mãi</a>
+        <a class="btn-menu-bottom" href="#">Danh sách đơn vay</a>   
+    </div>
+    <marquee class="position-absolute text-marquee" direction="left" height="26px">
+        <div class="marquee">
+            <span class="marquee-rank">A1</span>
+            <span class="marquee-bold">VMX20051435 :</span>
+            <span class="marquee-red">Khoản vay : </span>
+            <span style="font-size: 13px">/ Thời hạn : </span>
+            <span class="marquee-red-bold">30.000.000 VNĐ</span>
+            <span style="font-size: 13px">/ 30 tháng</span>
+            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+
+            <span class="marquee-rank">A1</span>
+            <span class="marquee-bold">VMX20051435 :</span>
+            <span class="marquee-red">Khoản vay : </span>
+            <span style="font-size: 13px">/ Thời hạn : </span>
+            <span class="marquee-red-bold">30.000.000 VNĐ</span>
+            <span style="font-size: 13px">/ 30 tháng</span>
+            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+
+            <span class="marquee-rank">A1</span>
+            <span class="marquee-bold">VMX20051435:</span>
+            <span class="marquee-red">Khoản vay: </span>
+            <span style="font-size: 13px">/ Thời hạn :</span>
+            <span class="marquee-red-bold">30.000.000 VNĐ</span>
+            <span style="font-size: 13px">/ 30 tháng</span>
+            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+
+            <span class="marquee-rank">A1</span>
+            <span class="marquee-bold">VMX20051435 :</span>
+            <span class="marquee-red">Khoản vay : </span>
+            <span style="font-size: 13px">/ Thời hạn :</span>
+            <span class="marquee-red-bold">30.000.000 VNĐ</span>
+            <span style="font-size: 13px">/ 30 tháng</span>
+            <span class="marquee-invest "><a href="" style="color: #DD1F26; text-decoration: none;">Đầu tư</a></span>|
+        </div>
+    </marquee>
+    <div class="position-absolute title-quick-loan" style="padding: 27px 30px; ">
+        <div style="margin-bottom: 24px;">
+            <p class="text-registration" style="margin-bottom: 5px;">Đăng kí vay nhanh</p>
+            <p class="text-amount">4.789 người vay thành công</p>
+        </div>
+        <div style="margin-bottom: 2px;">
+            <div class="input-groupalign-items-center" style="margin-bottom: 15px;">
+                <input type="text" class="form-control input-text" placeholder="Họ và tên của bạn">
+            </div>
+            <div class="input-group" style="margin-bottom: 15px;">
+                <input type="text" class="form-control input-text" placeholder="Số điện thoại của bạn">
+            </div>
+            <div class="input-group input-select" style="margin-bottom: 15px;">
+                <input type="text" class="form-control p-0" style="border: none;" placeholder="Khu vực sống hiện tại (Tỉnh/TP)">
+                <button type="button" class="bg-white dropdown-toggle dropdown-toggle-split p-0" style="border: none; margin-top: 4px;"></button>
+            </div>
+            <div class="input-group input-select" style="margin-bottom: 15px;">
+                <input type="text" class="form-control p-0" style="border: none;" placeholder="Khu vực sống hiện tại (Quận/Huyện)">
+                <button type="button" class="bg-white dropdown-toggle dropdown-toggle-split p-0" style="border: none; margin-top: 4px;"></button>
+            </div>
+        </div>
+        <div style="margin-bottom: 25px;">
+            <p class="mb-0 text-advise">Bạn có đồng ý để VNFITE gọi điện thoại <br> và tư vấn khoản vay</p>
+        </div>
+        <div>
+            <button class="btn-registration-fast">Đăng kí vay nhanh</button>
+        </div>
+    </div>
+</div>
+<div style="background: #333333; padding: 24px 128px 68px 154px;">
+    <div>
+        <p class="mb-0 text-uppercase text-package">Các gói sản phẩm vay</p>
+    </div>
+    <div class="d-flex justify-content-around text-center">
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-wallet.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;">Vay theo <br> lương </p>
+            </div>
+        </a>
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-notebook.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;">Vay theo hộ <br> khẩu </p>
+            </div>
+        </a>
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-motobike.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;">Vay theo đăng <br> kí xe máy</p>
+            </div>
+        </a>
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-pickbank.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;">Vay trả góp </p>
+            </div>
+        </a>
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-car-service.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;">Vay theo đăng <br> ký ô tô</p>
+            </div>
+        </a>
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-notebook.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;"> Vay theo Cầm <br> sổ đỏ</p>
+            </div>
+        </a>
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-car.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;">Vay theo Cầm <br> ô tô </p>
+            </div>
+        </a>
+        <a class="text-title-loan" href="">
+            <div>
+                <img src="../assets/images/icon-invoice.png" width="60px" height="60px" alt="">
+                <p class="mb-0" style="margin-top: 4px;">Vay theo hoá <br> đơn điện,nước </p>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="bg-white" style="margin: 56px 136px; padding: 41px 136px;">
+    <div style="border: 1px solid #DD1F26; display: inline-block; padding: 7px 15px; border-radius: 8px;">
+        <p class="mb-0 text-upppercase text-papers">Bước 1 : Giấy tờ bạn cần có</p>
+    </div>
+    <div class="d-flex" style="margin-top: 53px;">
+        <div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Chứng minh thư
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Sổ hộ khẩu
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Giấy đăng ký kết hôn
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Bằng cấp
+                </label>
+            </div>
+        </div>
+        <div style="margin-left: 36px;">
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Bảo hiểm y tế
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Mã số thuế
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Hợp đồng lao động
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Sao kê bảng lương
+                </label>
+            </div>
+        </div>
+        <div style="margin-left: 53px;">
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Quyết định bổ nhiệm
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Địa chỉ làm việc
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Sổ đỏ
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Xe ô tô
+                </label>
+            </div>
+        </div>
+        <div style="margin-left: 32px;">
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    Xe máy
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                   
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                   
+                </label>
+            </div>
+        </div>
+        <div style="margin-left: 140px;">
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                   
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                    
+                </label>
+            </div>
+            <div class="form-check" style="margin-bottom: 30px;">
+                <input class="form-check-input input-check" type="radio">
+                <label class="form-check-label label-check">
+                   
+                </label>
+            </div>
+        </div>
+    </div>
+    <div style="border: 1px solid #DD1F26; display: inline-block; padding: 7px 40px; border-radius: 8px;">
+        <p class="mb-0 text-upppercase text-papers">Bước 2 : Khoản vay bạn cần</p>
+    </div>
+    <div class="d-flex">
+        <div class="slidecontainer" style="margin-right: 12px;">
+            <p class="mb-0 text-money" style="margin-top: 20px;">Số tiền: <span style="color: #DD1F26;">50.000.000</span></p>
+            <input class="input-ranger" type="range" min="1" max="100" value="50">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-select-money">0</p>
+                <p class="mb-0 text-select-money">70.000.000 đ</p>
+            </div>
+        </div>
+        <div class="slidecontainer" style="margin-left: 12px;">
+            <p class="mb-0 text-money" style="margin-top: 20px;">Thời hạn: <span style="color: #DD1F26;">12 tháng</span></p>
+            <input class="input-ranger" type="range" min="1" max="100" value="50">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-select-money">0</p>
+                <p class="mb-0 text-select-money">24 tháng</p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center" style="margin: 30px 0;">
+        <p class="mb-0 text-uppercase text-pay">Tiền trả hàng tháng</p>
+        <div style="margin: 0 26px; border: 1px solid #DD1F26; display: inline-block; padding: 7px 15px; border-radius: 8px;">
+            <p class="mb-0 text-upppercase text-pay" style="color: #DD1F26;">4.166.667</p>
+        </div>
+        <p class="mb-0 text-uppercase text-pay">Vnd/tháng</p>
+    </div>
+    <div style="border: 1px solid #DD1F26; display: inline-block; padding: 7px 30px; border-radius: 8px;">
+        <p class="mb-0 text-upppercase text-papers">Bước 3 : Đăng kí vay</p>
+    </div>
+    <div style="margin-top: 40px;">
+        <div class="d-flex w-75" style="justify-content: flex-start; margin-bottom: 20px;">
+            <div class="input-group w-100" style="margin-right: 15px;">
+                <input type="text" class="form-control input-text" style="border-radius: 8px;" placeholder="Họ và tên của bạn">
+            </div>
+            <div class="input-group w-100" style="margin-left: 15px;">
+                <input type="text" class="form-control input-text" style="border-radius: 8px;" placeholder="Số điện thoại của bạn">
+            </div>
+        </div>
+        <div class="d-flex w-75" style="justify-content: flex-start;">
+            <div class="input-group input-select" style="margin-right: 15px; border-radius: 8px;">
+                <input type="text" class="form-control p-0" style="border: none;" placeholder="Khu vực sống hiện tại (Tỉnh/TP)">
+                <button type="button" class="bg-white dropdown-toggle dropdown-toggle-split p-0" style="border: none; margin-top: 4px;"></button>
+            </div>
+            <div class="input-group input-select" style="margin-left: 15px; border-radius: 8px;">
+                <input type="text" class="form-control p-0" style="border: none;" placeholder="Khu vực sống hiện tại (Quận/Huyện)">
+                <button type="button" class="bg-white dropdown-toggle dropdown-toggle-split p-0" style="border: none; margin-top: 4px;"></button>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn-registration-now">Đăng kí vay ngay</button>
+        </div>
+    </div>
+</div>
+<div style="background: #E5E5E5; padding-top: 59px;">
+    <div style="text-align: center;">
+        <p class="mb-0 text-steps text-uppercase">CÁC BƯỚC VAY MỘT KHOẢN VAY CÁ NHÂN</p>
+    </div>
+    <div class="bg-white d-flex justify-content-between" style="margin-top: 72px; padding: 55px 193px 30px 193px;">
+        <div style="margin-right: 22px;">
+            <div class="d-flex justify-content-between">
+                <div style="background-color: #DD1F26; padding: 20px;">
+                    <img src="../assets/images/dankivay.png" width="39px" height="40px" alt="">
+                </div>
+                <div>
+                    <img src="../assets/images/left-red.png" width="40px" height="20px" alt="">
+                </div>
+            </div>
+            <div style="margin-top: 8px;">
+                <p class="text-number-steps">BƯỚC 1: ĐĂNG KÍ VAY</p>
+                <p class="text-note-steps">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank 
+                    từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. 
+                    Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+        <div style="margin: 0 22px;">
+            <div class="d-flex justify-content-between">
+                <div style="background-color: #DD1F26; padding: 20px;">
+                    <img src="../assets/images/dankivay.png" width="39px" height="40px" alt="">
+                </div>
+                <div>
+                    <img src="../assets/images/left-red.png" width="40px" height="20px" alt="">
+                </div>
+            </div>
+            <div style="margin-top: 8px;">
+                <p class="text-number-steps">BƯỚC 1: ĐĂNG KÍ VAY</p>
+                <p class="text-note-steps">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank 
+                    từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. 
+                    Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+        <div style="margin: 0 22px;">
+            <div class="d-flex justify-content-between">
+                <div style="background-color: #DD1F26; padding: 20px;">
+                    <img src="../assets/images/dankivay.png" width="39px" height="40px" alt="">
+                </div>
+                <div>
+                    <img src="../assets/images/left-red.png" width="40px" height="20px" alt="">
+                </div>
+            </div>
+            <div style="margin-top: 8px;">
+                <p class="text-number-steps">BƯỚC 1: ĐĂNG KÍ VAY</p>
+                <p class="text-note-steps">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank 
+                    từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. 
+                    Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+        <div style="margin-left: 22px;">
+            <div class="d-flex justify-content-between">
+                <div style="background-color: #DD1F26; padding: 20px;">
+                    <img src="../assets/images/dankivay.png" width="39px" height="40px" alt="">
+                </div>
+                <div>
+                    <img src="../assets/images/left-red.png" width="40px" height="20px" alt="">
+                </div>
+            </div>
+            <div style="margin-top: 8px;">
+                <p class="text-number-steps">BƯỚC 1: ĐĂNG KÍ VAY</p>
+                <p class="text-note-steps">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank 
+                    từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. 
+                    Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div style="background: #E5E5E5; padding-top: 67px; padding-bottom: 40px;">
+    <div style="margin-left: 225px; margin-bottom: 67px;">
+        <p class="mb-0 title-tutorial">Hướng dẫn cách vay tiền nhanh</p>
+    </div>
+    <div style="padding: 0 139px;">
+        <div class="d-flex justify-content-around align-items-top">
+            <div style="margin-right: 27px;">
+                <p class="mb-0 number-tutorial" style="background: #E9333A; padding: 5px 20px;">1</p>
+            </div>
+            <div class="bg-white" style="padding: 19px 32px 23px 24px">
+                <p class="mb-0 text-tutorial">1. Bạn có thể vay tiền online bằng hình thức nào?</p>
+                <p class="mb-0 text-tutorial-note">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...
+                    Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với 
+                    chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với 
+                    ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 0 139px; margin-top: 24px;">
+        <div class="d-flex justify-content-around align-items-top">
+            <div style="margin-right: 27px;">
+                <p class="mb-0 number-tutorial" style="background: #E9333A; padding: 5px 20px;">2</p>
+            </div>
+            <div class="bg-white" style="padding: 19px 32px 23px 24px">
+                <p class="mb-0 text-tutorial">2. Bạn có thể vay tiền online bằng hình thức nào?</p>
+                <p class="mb-0 text-tutorial-note">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...
+                    Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với 
+                    chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với 
+                    ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 0 139px; margin-top: 24px;">
+        <div class="d-flex justify-content-around align-items-top">
+            <div style="margin-right: 27px;">
+                <p class="mb-0 number-tutorial" style="background: #E9333A; padding: 5px 20px;">3</p>
+            </div>
+            <div class="bg-white" style="padding: 19px 32px 23px 24px">
+                <p class="mb-0 text-tutorial">1. Bạn có thể vay tiền online bằng hình thức nào?</p>
+                <p class="mb-0 text-tutorial-note">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...
+                    Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với 
+                    chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với 
+                    ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 0 139px; margin-top: 24px;">
+        <div class="d-flex justify-content-around align-items-top">
+            <div style="margin-right: 27px;">
+                <p class="mb-0 number-tutorial" style="background: #E9333A; padding: 5px 20px;">4</p>
+            </div>
+            <div class="bg-white" style="padding: 19px 32px 23px 24px">
+                <p class="mb-0 text-tutorial">1. Bạn có thể vay tiền online bằng hình thức nào?</p>
+                <p class="mb-0 text-tutorial-note">Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...
+                    Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, 
+                    và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với ngân hàng Techcombank từ tháng 8 năm 2020 với 
+                    chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...Chúng tôi đã kí kết hợp tác với 
+                    ngân hàng Techcombank từ tháng 8 năm 2020 với chung mục đích muốn giúp người dùng tiếp cận được với nhiều nguồn vốn, và tiếp cận nhiều hơn với các quỹ tiền tệ, nhờ vào đó giúp thúc đẩy nền kinh tế hợp tác. Việt á là một ngân hàng nhà nước...</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="position-relative" style="margin-bottom: 10px">
+    <img src="../assets/images/bg-index.png" width="100%" height="467px" alt="">
+    <div class="bg-white position-absolute position-download" style="padding: 20px 20px;">
+        <p class="mb-0 text-download">TẢI APP VNFITE</p>
+        <div style="text-align: center;">
+        <img src="../assets/images/QR CODE 1.png" width="244px" height="244px" alt="">
+        </div>
+    </div>
+</div>
+<div class="bg-white footer">
+    <div class="container-fluid" style="padding-top: 25px;">
+        <div class="row footer-top" style="margin: 0 5%;">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="logo"><a href=""><img src="../assets/images/logo.png" width="100%"></a></div>
+                <div class="content">
+                    <p style="font-weight: 700;">TRỤ SỞ CHÍNH: TẦNG 7, SỐ 1 LƯƠNG YÊN, PHƯỜNG BẠCH ĐẰNG, QUẬN HAI BÀ TRƯNG, HÀ NỘI.</p>
+                    <input class="input-checker" type="text" placeholder="Kiểm tra tỷ lệ vay của bạn">
+                    <button class="btn-search"><img style="width: 80%;" src="../assets/images/arrow-white.png" alt="#"></button>
+                    <div>
+                        <div class="d-flex align-items-center communications-768px" style="padding-top: 20px;">
+                            <img src="../assets/images/icon-phone.png" style="margin-right: 15px;">
+                            <p class="mb-0" style="color: #DD1F26; font-size: 18px">024 - 3367 - 6699</p>
+                        </div>
+                        <div class="d-flex align-items-center communications-768px" style="padding-top: 15px;">
+                            <img src="../assets/images/icon-gmail.png" style="margin-right: 15px;">
+                            <p class="mb-0" style="color: #337ab7; font-size: 13px;">vnfite@gmail.com.vn</p>
+                        </div>
+                        <div class="d-flex align-items-center communications-768px" style="padding-top: 15px;">
+                            <img src="../assets/images/icon-fb.png" style="margin-right: 15px;">
+                            <p class="mb-0" style="color: #2F80ED; font-size: 13px;">VnFite Việt Nam</p>
+                        </div>
+                        <div class="d-flex align-items-center communications-768px" style="padding-top: 15px;">
+                            <img src="../assets/images/icon-zing.png" style="margin-right: 15px;">
+                            <p class="mb-0" style="color: #19A1B4; font-size: 13px;">VNFITE VIET NAM</p>
+                        </div>
+                        <div class="d-flex align-items-center communications-768px" style="padding-top: 15px;">
+                            <img src="../assets/images/icon-youtube.png" style="margin-right: 15px;">
+                            <p class="mb-0" style="color: #DD1F26; font-size: 13px;">VNFITE VIET NAM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="row" style="padding-top: 40px;">
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-align-mobile" style="text-align: right;">
+                        <div class="title"><a class="footer-menu" href="">NHẬN ĐẦU TƯ (VAY)</a></div>
+                        <ul style="list-style: none;">
+                            <li><a class="footer-information" href="#">Sản phẩm</a></li>
+                            <li><a class="footer-information" href="#">Khuyến mãi</a></li>
+                            <li><a class="footer-information" href="#">Sàn giao dịch</a></li>
+                            <li><a class="footer-information" href="#">Hồ sơ cho vay</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-align-mobile" style="text-align: right;">
+                        <div class="title"><a class="footer-menu" href="">NHÀ ĐẦU TƯ</a></div>
+                        <ul style="list-style: none;">
+                            <li><a class="footer-information" href="#">Sản phẩm đầu tư</a></li>
+                            <li><a class="footer-information" href="#">Khuyến mãi</a></li>
+                            <li><a class="footer-information" href="#">Quản lý rủi ro</a></li>
+                            <li><a class="footer-information" href="#">Sàn giao dịch</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-align-mobile" style="text-align: right;">
+                        <div class="title"><a class="footer-menu" href="">VỀ CHÚNG TÔI</a></div>
+                        <ul style="list-style: none;">
+                            <li><a class="footer-information" href="#">Mục tiêu</a></li>
+                            <li><a class="footer-information" href="#">Tầm nhìn</a></li>
+                            <li><a class="footer-information" href="#">Đội ngũ lãnh đạo</a></li>
+                            <li><a class="footer-information" href="#">Hình ảnh</a></li>
+                            <li><a class="footer-information" href="#">Báo chí</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-align-mobile" style="text-align: right;">
+                        <div class="title"><a class="footer-menu" href="">TIỆN ÍCH</a></div>
+                        <ul style="list-style: none;">
+                            <li><a class="footer-information" href="#">Tỷ giá</a></li>
+                            <li><a class="footer-information" href="#">Lãi suất đầu tư</a></li>
+                            <li><a class="footer-information" href="#">Biểu phí và biểu mẫu</a></li>
+                            <li><a class="footer-information" href="#">Công cụ tính toán</a></li>
+                            <li><a class="footer-information" href="#">Tra cứu hoá đơn điện tử</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-align-mobile" style="text-align: right;">
+                        <div class="title"><a class="footer-menu" href="">TẢI APP VNFITE</a></div>
+                        <ul style="list-style: none;">
+                            <li><a class="footer-information" href="#">Tải app VNFITE</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-align-mobile" style="text-align: right;">
+                        <div class="title"><a class="footer-menu" href="">TRẢI NGHIỆM VNFITE</a></div>
+                        <ul style="list-style: none;">
+                            <li><a class="footer-information" href="#">Đầu tư trải nghiệm</a></li>
+                            <li><a class="footer-information" href="#">Hướng dẫn sử dụng</a></li>
+                            <li><a class="footer-information" href="#">Khảo sát đánh giá</a></li>
+                            <li><a class="footer-information" href="#">Video về bài học thành công</a></li>
+                            <li><a class="footer-information" href="#">Blog VNFITE</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid d-flex flex-768px" style="background-color: #333333; padding: 15px 6%;">
+        <div class="col-md-3 img-footer-768px">
+            <img class="footer-logo" src="../assets/images/logo2.png" width="100%">
+        </div>
+        <div class="footer-text-768px" style="padding: 0 15px;">
+            <p class="mb-0 footer-note">Giấy phép thiết lập trang thông tin điện tử tổng hợp trên internet số 3321/GP-TTĐT do Sở
+                Thông tin và Truyền thông TP Hà Nội cấp ngày 03 tháng 07 năm 2019.<br><b>Liên hệ quảng cáo:
+                    098 - 999 - 9999</p>
+        </div>
+        <div class="license-768px" style="padding: 0 15px;">
+            <p class="mb-0 footer-note">Giấy phép thiết lập trang thông tin điện tử tổng hợp trên internet số 3321/GP-TTĐT do Sở
+                Thông tin và Truyền thông TP Hà Nội cấp ngày 03 tháng 07 năm 2019.</p>
+        </div>
+    </div>
+</div>
+<div class="supporter">
+    <div class="supporter-bar">
+        <div>
+            <img src="../assets/images/messenger 1.png" width="40px" height="40px" alt="">
+            <p class="mb-0" style="margin-top: 9px">Chat</p>
+        </div>
+        <div style="margin-top: 15px;">
+            <img src="../assets/images/phone1.png" width="32px" height="32px" alt="">
+            <p class="mb-0" style="margin-top: 9px">Hỗ trợ</p>
+        </div>
+        <div style="margin-top: 15px;">
+            <img src="../assets/images/dkvay.png" width="32px" height="32px" alt="">
+            <p class="mb-0" style="margin-top: 9px">Đk vay</p>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

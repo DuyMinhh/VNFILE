@@ -131,7 +131,11 @@
         width: 40px;
         height: 40px;
     }
+    .title {
+        margin-left: 40px;
+    }
+    .btn-search {
+        width: 50px !important;
+        height: 50px !important;
+    }
 }
-@media screen and (max-width: 900px) and (min-width: 600px) {
-
-  }
